@@ -87,11 +87,11 @@
                     >
                       <thead>
                         <tr class="bg-blue">
-                          <th>Rendering engine</th>
-                          <th>Browser</th>
-                          <th>Platform(s)</th>
-                          <th>Engine version</th>
-                          <th>CSS grade</th>
+                          <th>Date</th>
+                          <th>Event Name</th>
+                          <th>Event Description</th>
+                          <th>Local Path (original photo)</th>
+                          <th>Number of Photos</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -556,7 +556,7 @@
     <!-- AdminLTE App -->
     <script src="dist/js/adminlte.min.js"></script>
     <!-- AdminLTE for demo purposes -->
-    <script src="dist/js/demo.js"></script>
+
     <!-- Page specific script -->
     <script>
       $(function () {
@@ -570,15 +570,6 @@
           .buttons()
           .container()
           .appendTo("#example1_wrapper .col-md-6:eq(0)");
-        $("#example2").DataTable({
-          paging: true,
-          lengthChange: false,
-          searching: false,
-          ordering: true,
-          info: true,
-          autoWidth: false,
-          responsive: true,
-        });
       });
     </script>
   </body>

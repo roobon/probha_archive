@@ -35,6 +35,12 @@ if (isset($_POST['page_logout'])) {
   <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css" />
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css" />
+  <style>
+    div.dataTables_wrapper div.dataTables_filter input {
+      width: 200px;
+      border: 2px solid blue;
+    }
+  </style>
 </head>
 
 <body class="hold-transition sidebar-collapse sidebar-mini">
@@ -156,7 +162,7 @@ if (isset($_POST['page_logout'])) {
                     <h3>Information about above table</h3>
                     <ul>
                       <li>You can sort with each column</li>
-                      <li>You can search any data using search box in the top right</li>
+                      <li>You can search any data using search box in the top right. It helps to filter data instantly</li>
                       <li><i class="fa fa-cloud"></i> this icon for cloud storage. Active link will take you to the storage area</li>
                       <li><i class="fas fa-film"></i> this icon for video file</li>
                       <li><i class="fas fa-file-image"></i> this icon for image/photo</li>

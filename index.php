@@ -1,61 +1,59 @@
+<?php
+session_start();
+
+if (isset($_POST['submit_pass']) && $_POST['pass']) {
+  $pass = $_POST['pass'];
+  if ($pass == "abc123") {
+    $_SESSION['password'] = $pass;
+  } else {
+    echo "<script>";
+    echo "alert('Incorrect Pssword')";
+    echo "</script>";
+  }
+}
+
+if (isset($_POST['page_logout'])) {
+  unset($_SESSION['password']);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Probha Aurora Archive for PHOTO-VIDEO</title>
 
-    <!-- Google Font: Source Sans Pro -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"
-    />
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
-      crossorigin="anonymous"
-    />
-    <!-- DataTables -->
-    <link
-      rel="stylesheet"
-      href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css"
-    />
-    <!-- Theme style -->
-    <link rel="stylesheet" href="dist/css/adminlte.min.css" />
-  </head>
-  <body class="hold-transition sidebar-collapse sidebar-mini">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Probha Aurora Archive for PHOTO-VIDEO</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous" />
+  <!-- DataTables -->
+  <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css" />
+  <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css" />
+  <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css" />
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css" />
+</head>
+
+<body class="hold-transition sidebar-collapse sidebar-mini">
+  <?php
+  if (isset($_SESSION['password'])) {
+  ?>
     <div class="wrapper">
       <!-- Navbar -->
       <nav class="main-header navbar navbar-expand navbar-white navbar-light">
         <!-- Left navbar links -->
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" data-widget="pushmenu" href="#" role="button"
-              ><i class="fas fa-bars"></i
-            ></a>
+            <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
           </li>
           <li class="nav-item d-none d-sm-inline-block">
             <a href="index.html" class="nav-link">Archive Home</a>
           </li>
           <li class="nav-item d-none d-sm-inline-block">
-            <a
-              href="#"
-              class="nav-link"
-              data-toggle="tooltip"
-              title="Roobon@01749752942"
-              >Contact</a
-            >
+            <a href="#" class="nav-link" data-toggle="tooltip" title="Roobon@01749752942">Contact</a>
           </li>
         </ul>
 
@@ -90,10 +88,7 @@
                 <div class="card">
                   <!-- /.card-header -->
                   <div class="card-body">
-                    <table
-                      id="example1"
-                      class="table table-bordered table-striped table-hover"
-                    >
+                    <table id="example1" class="table table-bordered table-striped table-hover">
                       <thead>
                         <tr class="bg-blue">
                           <th style="width: 70px">Date</th>
@@ -111,13 +106,7 @@
                           <td>Rotary Action Hero Training</td>
                           <td></td>
                           <td>
-                            <a
-                              href="#"
-                              data-toggle="popover"
-                              title="PAARCHIVES-2023"
-                              data-content="/Rotary_ActionHero_Training_22May2023"
-                              ><i class="fas fa-file-image"></i
-                            ></a>
+                            <a href="#" data-toggle="popover" title="PAARCHIVES-2023" data-content="/Rotary_ActionHero_Training_22May2023"><i class="fas fa-file-image"></i></a>
                           </td>
                           <td></td>
                           <td><i class="fa fa-cloud"></i></td>
@@ -128,13 +117,7 @@
                           <td>Rotary Action Hero Training</td>
                           <td></td>
                           <td>
-                            <a
-                              href="#"
-                              data-toggle="popover"
-                              title="PAARCHIVES-2023"
-                              data-content="/Rotary_ActionHero_Training_22May2023"
-                              ><i class="fas fa-film"></i
-                            ></a>
+                            <a href="#" data-toggle="popover" title="PAARCHIVES-2023" data-content="/Rotary_ActionHero_Training_22May2023"><i class="fas fa-film"></i></a>
                           </td>
                           <td></td>
                           <td><i class="fa fa-cloud"></i></td>
@@ -145,21 +128,11 @@
                           <td>Global Action Day</td>
                           <td>Art competition, Paper crafting</td>
                           <td>
-                            <a
-                              href="#"
-                              data-toggle="popover"
-                              title="PAARCHIVES-2023"
-                              data-content="/GlobalActionDays_06May2023"
-                              ><i class="fas fa-file-image"></i
-                            ></a>
+                            <a href="#" data-toggle="popover" title="PAARCHIVES-2023" data-content="/GlobalActionDays_06May2023"><i class="fas fa-file-image"></i></a>
                           </td>
                           <td>212 Photos</td>
                           <td>
-                            <a
-                              target="_blank"
-                              href="https://cloud.degoo.com/share/0ZwKML3ywjDauG2Vma0ALQ"
-                              ><i class="fa fa-cloud"></i
-                            ></a>
+                            <a target="_blank" href="https://cloud.degoo.com/share/0ZwKML3ywjDauG2Vma0ALQ"><i class="fa fa-cloud"></i></a>
                           </td>
                           <td><i class="fa fa-cloud"></i></td>
                         </tr>
@@ -176,7 +149,11 @@
                         </tr>
                       </tfoot>
                     </table>
+                    <form method="post" action="" id="logout_form">
+                      <input type="submit" class="btn btn-danger" name="page_logout" value="LOGOUT">
+                    </form>
                   </div>
+
                   <!-- /.card-body -->
                 </div>
                 <!-- /.card -->
@@ -192,10 +169,8 @@
       <!-- /.content-wrapper -->
       <footer class="main-footer">
         <div class="float-right d-none d-sm-block"></div>
-        <strong
-          >Copyright &copy; 2023-2050
-          <a href="https://adminlte.io">Probha Aurora Ltd</a>.</strong
-        >
+        <strong>Copyright &copy; 2023-2050
+          <a href="https://adminlte.io">Probha Aurora Ltd</a>.</strong>
         All rights reserved.
       </footer>
 
@@ -206,6 +181,7 @@
       <!-- /.control-sidebar -->
     </div>
     <!-- ./wrapper -->
+
 
     <!-- jQuery -->
     <script src="plugins/jquery/jquery.min.js"></script>
@@ -230,7 +206,7 @@
 
     <!-- Page specific script -->
     <script>
-      $(function () {
+      $(function() {
         $("#example1")
           .DataTable({
             responsive: true,
@@ -244,10 +220,28 @@
       });
     </script>
     <script>
-      $(document).ready(function () {
+      $(document).ready(function() {
         $('[data-toggle="popover"]').popover();
         $('[data-toggle="tooltip"]').tooltip();
       });
     </script>
-  </body>
+
+  <?php
+  } else {
+  ?>
+    <h1>LOGIN TO PROCEED</h1>
+    <form class="form form-inline" method="post" action="" id="login_form">
+      <div class="formgroup">
+        <input type="password" name="pass" class="form-control" placeholder="*******">
+      </div>
+      <input type="submit" class="btn btn-primary" name="submit_pass" value="DO SUBMIT">
+
+    </form>
+    <span>Password : abc123</span>
+    <!-- <div class="alert alert-info">Incorrect Password</div> -->
+  <?php
+  }
+  ?>
+</body>
+
 </html>

@@ -46,10 +46,16 @@
             ></a>
           </li>
           <li class="nav-item d-none d-sm-inline-block">
-            <a href="index.html" class="nav-link">Home</a>
+            <a href="index.html" class="nav-link">Archive Home</a>
           </li>
           <li class="nav-item d-none d-sm-inline-block">
-            <a href="#" class="nav-link">Contact</a>
+            <a
+              href="#"
+              class="nav-link"
+              data-toggle="tooltip"
+              title="Roobon@01749752942"
+              >Contact</a
+            >
           </li>
         </ul>
 
@@ -66,9 +72,7 @@
           <div class="container-fluid">
             <div class="row mb-2">
               <div class="col-sm-6">
-                <h1>
-                  Probha Aurora Archive for Original PHOTO-VIDEO with Source
-                </h1>
+                <h1>Probha Aurora PHOTO-VIDEO Archive</h1>
               </div>
               <div class="col-sm-6"></div>
             </div>
@@ -84,9 +88,6 @@
                 <!-- /.card -->
 
                 <div class="card">
-                  <div class="card-header">
-                    <h3 class="card-title"></h3>
-                  </div>
                   <!-- /.card-header -->
                   <div class="card-body">
                     <table
@@ -105,7 +106,7 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
+                        <tr class="bg-gradient-light">
                           <td>22-May-2023</td>
                           <td>Rotary Action Hero Training</td>
                           <td></td>
@@ -115,14 +116,31 @@
                               data-toggle="popover"
                               title="PAARCHIVES-2023"
                               data-content="/Rotary_ActionHero_Training_22May2023"
-                              >Photo</a
-                            >
+                              ><i class="fas fa-file-image"></i
+                            ></a>
                           </td>
-                          <td>C</td>
+                          <td></td>
                           <td><i class="fa fa-cloud"></i></td>
                           <td><i class="fa fa-cloud"></i></td>
                         </tr>
-                        <tr>
+                        <tr class="bg-gradient-light">
+                          <td>22-May-2023</td>
+                          <td>Rotary Action Hero Training</td>
+                          <td></td>
+                          <td>
+                            <a
+                              href="#"
+                              data-toggle="popover"
+                              title="PAARCHIVES-2023"
+                              data-content="/Rotary_ActionHero_Training_22May2023"
+                              ><i class="fas fa-film"></i
+                            ></a>
+                          </td>
+                          <td></td>
+                          <td><i class="fa fa-cloud"></i></td>
+                          <td><i class="fa fa-cloud"></i></td>
+                        </tr>
+                        <tr class="bg-gradient-light">
                           <td>06-May-2023</td>
                           <td>Global Action Day</td>
                           <td>Art competition, Paper crafting</td>
@@ -132,10 +150,10 @@
                               data-toggle="popover"
                               title="PAARCHIVES-2023"
                               data-content="/GlobalActionDays_06May2023"
-                              >Photo</a
-                            >
+                              ><i class="fas fa-file-image"></i
+                            ></a>
                           </td>
-                          <td>212</td>
+                          <td>212 Photos</td>
                           <td>
                             <a
                               target="_blank"
@@ -228,6 +246,7 @@
     <script>
       $(document).ready(function () {
         $('[data-toggle="popover"]').popover();
+        $('[data-toggle="tooltip"]').tooltip();
       });
     </script>
   </body>

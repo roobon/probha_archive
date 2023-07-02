@@ -50,7 +50,7 @@ if (isset($_POST['page_logout'])) {
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
           </li>
           <li class="nav-item d-none d-sm-inline-block">
-            <a href="index.html" class="nav-link">Archive Home</a>
+            <a href="index.php" class="nav-link">Archive Home</a>
           </li>
           <li class="nav-item d-none d-sm-inline-block">
             <a href="#" class="nav-link" data-toggle="tooltip" title="Roobon@01749752942">Contact</a>
@@ -106,7 +106,7 @@ if (isset($_POST['page_logout'])) {
                           <td>Rotary Action Hero Training</td>
                           <td></td>
                           <td>
-                            <a href="#" data-toggle="popover" title="PAARCHIVES-2023" data-content="/Rotary_ActionHero_Training_22May2023"><i class="fas fa-file-image"></i></a>
+                            <a href="#" data-toggle="tooltip" title="PAARCHIVES-2023/<br>Rotary_ActionHero_Training_22May2023/photos" data-html="true"><i class="fas fa-file-image"></i></a>
                           </td>
                           <td></td>
                           <td><i class="fa fa-cloud"></i></td>
@@ -117,7 +117,7 @@ if (isset($_POST['page_logout'])) {
                           <td>Rotary Action Hero Training</td>
                           <td></td>
                           <td>
-                            <a href="#" data-toggle="popover" title="PAARCHIVES-2023" data-content="/Rotary_ActionHero_Training_22May2023"><i class="fas fa-film"></i></a>
+                            <a href="#" data-toggle="tooltip" title="PAARCHIVES-2023/<br>Rotary_ActionHero_Training_22May2023/videos" data-html="true"><i class="fas fa-film"></i></a>
                           </td>
                           <td></td>
                           <td><i class="fa fa-cloud"></i></td>
@@ -128,7 +128,7 @@ if (isset($_POST['page_logout'])) {
                           <td>Global Action Day</td>
                           <td>Art competition, Paper crafting</td>
                           <td>
-                            <a href="#" data-toggle="popover" title="PAARCHIVES-2023" data-content="/GlobalActionDays_06May2023"><i class="fas fa-file-image"></i></a>
+                            <a href="#" data-toggle="tooltip" title="PAARCHIVES-2023/<br>GlobalActionDays_06May2023/photos" data-html="true"><i class="fas fa-file-image"></i></a>
                           </td>
                           <td>212 Photos</td>
                           <td>
@@ -152,6 +152,17 @@ if (isset($_POST['page_logout'])) {
                     <form method="post" action="" id="logout_form">
                       <input type="submit" class="btn btn-danger" name="page_logout" value="LOGOUT">
                     </form>
+                    <hr>
+                    <h3>Information about above table</h3>
+                    <ul>
+                      <li>You can sort with each column</li>
+                      <li>You can search any data using search box in the top right</li>
+                      <li><i class="fa fa-cloud"></i> this icon for cloud storage. Active link will take you to the storage area</li>
+                      <li><i class="fas fa-film"></i> this icon for video file</li>
+                      <li><i class="fas fa-file-image"></i> this icon for image/photo</li>
+                      <li>On mouse over these icons <i class="fas fa-file-image"></i>, <i class="fas fa-film"></i> you will get photo/video storage path</li>
+                      <li>There is pagination system. It helps to display 10/20 records page page</li>
+                    </ul>
                   </div>
 
                   <!-- /.card-body -->
@@ -223,6 +234,7 @@ if (isset($_POST['page_logout'])) {
       $(document).ready(function() {
         $('[data-toggle="popover"]').popover();
         $('[data-toggle="tooltip"]').tooltip();
+        $('[data-toggle="tooltip"]').css('color', 'red')
       });
     </script>
 
@@ -239,6 +251,7 @@ if (isset($_POST['page_logout'])) {
     </form>
     <span>Password : abc123</span>
     <!-- <div class="alert alert-info">Incorrect Password</div> -->
+
   <?php
   }
   ?>

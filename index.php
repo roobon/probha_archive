@@ -162,6 +162,7 @@ if (isset($_POST['page_logout'])) {
                       <li><i class="fas fa-file-image"></i> this icon for image/photo</li>
                       <li>On mouse over these icons <i class="fas fa-file-image"></i>, <i class="fas fa-film"></i> you will get photo/video storage path</li>
                       <li>There is pagination system. It helps to display 10/20 records page page</li>
+                      <li>Photo path: PAARCHIVES-2023/Rotary_ActionHero_Training_22May2023/photos. Here 'PAARCHIVES-2023' is our harddisk/ssd/nvme label </li>
                     </ul>
                   </div>
 

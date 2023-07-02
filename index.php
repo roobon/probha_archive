@@ -38,7 +38,7 @@ if (isset($_POST['page_logout'])) {
   <style>
     div.dataTables_wrapper div.dataTables_filter input {
       width: 200px;
-      border: 1px solid #ddd;
+      border: 1px solid blue;
     }
   </style>
 </head>
